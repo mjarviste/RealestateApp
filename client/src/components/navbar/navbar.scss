@@ -1,0 +1,142 @@
+@import '../../responsive.scss';
+
+nav {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+    a{
+        transition: 0.4s ease;
+        border-radius: 5px;
+
+        @include sm{
+            display: none;
+        }
+
+        &:hover {
+            scale: 1.1;
+        }
+    }
+
+    .left{
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            img{
+                padding-left: 10px;
+                height: 36px;
+                width: auto;
+
+            }
+            span {
+                @include md{
+                    display: none;
+                }
+                @include sm{
+                    display: initial;
+                }
+            }
+
+        }
+    }
+    .right {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #FBF5EE;
+        height: 100%;
+        @include md{
+            background-color: initial;
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            font-family: 'Cabin Bold';
+            span {
+                @include sm {
+                    display: none;
+                }
+            }
+            img {
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+            .profile {
+                background-color: #FFCB47;
+                position: relative;
+                .notification {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font-size: 14px;
+                    width: 26px;
+                    height: 26px;
+                    top: -10px;
+                    right: -10px;
+                    background-color: red;
+                    border-radius: 50%;
+                }
+            }
+        }
+        a{
+            padding: 12px 24px;
+            margin: 20px;
+        }
+        .register {
+            background-color: #FFCB47;
+        }
+        .menuIcon {
+            display: none;
+            z-index: 1000;
+            @include sm{
+                display: initial;
+            }
+            img{
+                height: 36px;
+                width: auto;
+                cursor: pointer;
+            }
+        }
+        .menu{
+            position: absolute;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            width: 50%;
+            top: 0;
+            right: -50%;
+            transition: 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+
+            &.active {
+                right: 0;
+            }
+
+            @include sm{
+                a{
+                    display: initial;
+                }
+            }
+        }
+    }
+}

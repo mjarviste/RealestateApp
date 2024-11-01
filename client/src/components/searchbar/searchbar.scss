@@ -1,0 +1,86 @@
+@import '../../responsive.scss';
+
+.searchbar {
+    .types {
+        .type{
+            padding: 16px 36px;
+            border: 1px solid #999;
+            border-bottom: none;
+            background-color: inherit;
+            cursor: pointer;
+            text-transform: capitalize;
+            &.active {
+                background-color: black;
+                color: white;
+            }
+
+            &:first-child {
+                border-top-left-radius: 5px;
+                border-right: none;
+            }
+            &:last-child {
+                border-top-right-radius: 5px;
+                border-left: none;
+            }
+        }
+    }
+    form{
+        border: 1px solid #999;
+        display: flex;
+        justify-content: space-between;
+        height: 64px;
+        gap:5px;
+
+        @include sm {
+            flex-direction: column;
+            border: none;
+        }
+        input{
+            border: none;
+            padding-inline: 10px;
+            width: 200px;
+
+            @include lg {
+                padding-inline: 5px;
+
+                &:nth-child(1) {
+                    width: 160px;
+                }
+
+                &:nth-child(2),&:nth-child(3) {
+                    width: 110px;
+                }
+            }
+            @include md {
+                &:nth-child(1) {
+                    width: auto;
+                }
+
+                &:nth-child(2),&:nth-child(3) {
+                    width: auto;
+                }
+            }
+            @include sm {
+                padding: 20px;
+                border: 1px solid #999;
+            }
+        }
+        button{
+            border: none;
+            cursor: pointer;
+            background-color: #FFCB47;
+            width: 72px;
+            @include lg {
+                width: 64px;
+            }
+            @include sm {
+                width: auto;
+                padding: 20px;
+            }
+            img{
+                height: 24px;
+                width: auto;
+            }
+        }
+    }
+}

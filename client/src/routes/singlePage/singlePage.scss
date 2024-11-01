@@ -1,0 +1,272 @@
+@import '../../responsive.scss';
+
+.singlePage {
+    display: flex;
+    height: 100%;
+    @include md {
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+        font-size: 14px;
+    }
+    @include sm {
+        font-size: 12px;
+    }
+    .details{
+        height: 100%;
+        flex: 3;
+        overflow-y: scroll;
+        @include md {
+            flex: none;
+            height: fit-content;
+            overflow: initial;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding-right: 50px;
+            @include md {
+               padding-right: 0px;
+               gap: 30px;
+            }
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                @include sm {
+                    gap: 30px;
+                }
+                .top{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 50px;
+                    .post{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 25px;
+                        @include sm {
+                            gap: 20px;
+                        }
+                        .title {
+                            font-size: 32px;
+
+                            @include lg {
+                                font-size: 28px;
+                            }
+                            @include md {
+                                font-size: 24px;
+                            }
+                            @include sm {
+                                font-size: 20px;
+                            }
+
+                            
+                        }
+                        .address {
+                            display: flex;
+                            align-items: center;
+                            color: #888;
+                            gap: 2px;
+                            font-size: 14px;
+                            .pin{
+                                width: 24px;
+                            }
+                            
+                        }
+                        .price {
+                            font-size: 24px;
+                            padding: 5px;
+                            border-radius: 5px;
+                            background-color: #FFE299;
+                            width: fit-content;
+
+                            @include sm {
+                                font-size: 18px;
+                            }
+                            
+                        }
+                    }
+                    .user {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                        background-color: #FFEEC2;
+                        padding: 20px 50px;
+                        border-radius: 10px;
+                        height: fit-content;
+                        white-space: nowrap;
+                        @include md{
+                            padding: 10px 30px;
+                        }
+                        img {
+                            width: 64px;
+                            height: 64px;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            @include md {
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+
+                    }
+                }
+                .bottom {
+                    color: #555;
+                    line-height: 20px;
+                    padding-bottom: 50px;
+                }
+            }
+        }
+    }
+    .features{
+        flex: 2;
+        background-color: #FBF5EE;
+        height: 100%;
+        overflow-y: scroll;
+        padding-bottom: 50px;
+        @include md {
+            flex: none;
+            width: 100%;
+            height: fit-content;
+            overflow: initial;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+            border-radius: 10px;
+        }
+        .wrapper{
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            img {
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+            }
+            .title {
+                font-size: 18px;
+                margin-bottom: 10px;
+                font-family: 'Cabin Bold';
+            }
+            .listVertical {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                border-radius: 10px;
+                gap: 20px;
+                padding: 20px;
+                
+                .feature {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .featureText {
+                        span {
+                            font-family: 'Cabin Bold';
+                            @include lg {
+                                font-size: 14px;
+                            }
+                        }
+                        p {
+                            font-size: 14;
+                            color: #555;
+                            @include lg {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .sizes{
+                display: flex;
+                justify-content: space-between;
+                gap: 5px;
+                .size{
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    background-color: white;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                    font-size: 14px;
+                    @include lg {
+                        font-size: 12px;
+                    }
+                    @include sm {
+                        font-size: 10px;
+                    }
+                }
+            }
+            .listHorizontal{
+                display: flex;
+                background-color: white;
+                padding: 20px;
+                justify-content: space-between;
+                gap: 20px;
+                border-radius: 10px;
+                @include sm {
+                    padding: 20px 10px;
+                    gap: 5px;
+                }
+                .place {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .placeText {
+                        span {
+                            font-family: 'Cabin Bold';
+                            @include lg {
+                                font-size: 14px;
+                            }
+                            @include sm {
+                                font-size: 12px;
+                            }
+                        }
+                        p {
+                            font-size: 14;
+                            color: #555;
+                            @include lg {
+                                font-size: 12px;
+                            }
+                            @include sm {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .mapContainer {
+                width: 100%;
+                height: 200px;
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap:5px;
+                    background-color: white;
+                    border: 1px solid #FFE299;
+                    border-radius: 5px;
+                    font-family: inherit;
+                    cursor: pointer;
+                    transition: all 0.4s ease;
+                    &:hover {
+                        background-color: lightgray;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.popUpContainer {
+    display: flex;
+    gap: 20px;
+    text-overflow: ellipsis;
+
+    img {
+        width: 64px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        justify-content: space-between;
+        .title {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

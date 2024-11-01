@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    font-family: "Cabin Regular", sans-serif;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Cabin Regular';
+    src: local('Cabin Regular'), url(./fonts/cabin.regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Cabin Bold';
+    src: local('Cabin Bold'), url(./fonts/cabin.bold.ttf) format('truetype');
+}
